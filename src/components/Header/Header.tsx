@@ -14,6 +14,12 @@ export const Header: FC = () => {
       >
         Testproject™ for Testpurposes™
       </h1>
+
+      <h2 className="text-2xl">
+        Helping testing tests since{" "}
+        <span className="line-through text-red-500">2023</span>
+        <span className="text-green-500"> idk</span>
+      </h2>
     </header>
   );
 };
