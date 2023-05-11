@@ -35,7 +35,9 @@ export const PostList: FC<PostListProps> = ({ className }) => {
             <td className="px-4 text-ellipsis whitespace-nowrap overflow-hidden">
               {post.body}
             </td>
-            <td className="px-4">{post.userId}</td>
+            <td width={48} className="px-4">
+              {post.userId}
+            </td>
           </tr>
         ))}
       </tbody>
