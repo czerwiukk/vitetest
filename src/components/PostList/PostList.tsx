@@ -22,19 +22,24 @@ export const PostList: FC<PostListProps> = ({ className }) => {
       <thead className="sticky top-0 bg-gray-50">
         <tr>
           <th className="px-4">Title</th>
+
           <th className="px-4">Body</th>
+
           <th className="px-4">User</th>
         </tr>
       </thead>
+
       <tbody className="h-64 overflow-auto">
         {posts.map((post) => (
           <tr key={post.id}>
             <td className="px-4 text-ellipsis whitespace-nowrap overflow-hidden">
               {post.title}
             </td>
+
             <td className="px-4 text-ellipsis whitespace-nowrap overflow-hidden">
               {post.body}
             </td>
+
             <td width={48} className="px-4">
               {post.userId}
             </td>

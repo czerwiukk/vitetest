@@ -1,11 +1,11 @@
 import { render, screen } from "@testing-library/react";
-import { PostList } from "./PostList.js";
+import { PostList } from "./PostList";
 
-vi.mock("./usePostList.js");
+vi.mock("./usePostList");
 
 describe("PostList", () => {
   it("should render data", async () => {
-    const hook = await import("./usePostList.js");
+    const hook = await import("./usePostList");
     hook.default = vi
       .fn()
       .mockReturnValue([
@@ -18,7 +18,7 @@ describe("PostList", () => {
   });
 
   it("should render loading message", async () => {
-    const hook = await import("./usePostList.js");
+    const hook = await import("./usePostList");
     hook.default = vi.fn().mockReturnValue([null, { isLoading: true }]);
 
     render(<PostList />);
@@ -26,7 +26,7 @@ describe("PostList", () => {
   });
 
   it("should render loading message", async () => {
-    const hook = await import("./usePostList.js");
+    const hook = await import("./usePostList");
     hook.default = vi
       .fn()
       .mockReturnValue([null, { isLoading: false, isError: true }]);
