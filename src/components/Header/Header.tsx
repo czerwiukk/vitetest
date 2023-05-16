@@ -5,7 +5,7 @@ export const Header: FC = () => {
   const [color, setColor] = useState("red");
 
   const switchColors = () =>
-    setColor((color) => (color === "green" ? "red" : "green"));
+    setColor((color) => (color === "blue" ? "red" : "blue"));
 
   const { elementRef } = useBigLetterIterator<HTMLHeadingElement>();
 
@@ -18,7 +18,7 @@ export const Header: FC = () => {
         Testproject™ for Testpurposes™
       </h1>
 
-      <h2 ref={elementRef} className="text-green-500 text-2xl">
+      <h2 ref={elementRef} className="text-blue-500 text-2xl">
         Happy development!
       </h2>
     </header>
